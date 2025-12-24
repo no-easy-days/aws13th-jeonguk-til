@@ -4,38 +4,84 @@
 
 > git 명령어나 사용 방법을 확실하게 숙지할 것
 > 절대 뒤쳐지지 말것
-- [ ]  목표 1
-- [ ]  목표 2
+
 
 ## 📝 배운 내용 (Today I Learned)
 
-### 주제 1
+### git
 
-- 상세 내용 1
-- 상세 내용 2
+- git을 사용하기 전에는 코드를 관리하고 수정하는것이 너무 어려웠다.
+- Git의 핵심은 분산이고 이는 충돌의 형태로 발현된다.
+- 분산식이기 때문에 원격 저장소의 코드가 훼손되더라도 각 개발자들이 코드 이력을 보유하고 있기 때문에 복구가 가능하다.
+- git은 로컬에서만 사용되는데 이를 사람들과 협업에 사용하기 위해 모이는 곳이 여기 이 github 이다.
 
-```
-// 필요하다면 코드 블럭을 활용하세요
-console.log("Hello, TIL!");
-
-```
-
-### 주제 2
-
-- 상세 내용
+### git hub
+- github CLI 를 사용하여 브라우저로 들어오지 않고 터미널에서 명령어 만으로도 PULLREQUST, ISSUE 확인 등을 할 수 있는 공식 명령줄 도구이다.
+- gh repo 등의 명령어를 통해 터미널에서 모든 것을 해결 할 수 있지만 개인적으로는 웹사이트를 이용하는 것이 지금은 훨씬 편리한 것 같다.
+- 나중에 github 웹사이트를 숙달하고 귀찮음을 느낀다면 명령어들을 하나씩 숙지해보는 것이 개인적으로 좋다고 생각한다.
+또한 키워드를 한줄 정리하며 git 용어에 대한 기본적인 개념과 의미를 알게되었다.
+| 키워드 | 학습내용 정리 |
+| --- | --- |
+| git | 우리가 코딩을 하면서 개발을 ~~부분에서부터 잘못해서 그 버전으로 돌리고 싶을때, 여러 실험을 해보고 싶을때 그것을 기록하는 기술이다.(로컬) |
+| github | git 저장소 들이 모이는 hub 라고 생각하면 되고 이슈관리나 풀리퀘스트 등을 관리할 수 있기 때문에 사람들과 협업하기 위한 협업 툴로서 의미를 가진다.  |
+| git commit | 하나의 의미있는 변경 사항으로 저장하는 명령 |
+| staging | 커밋하기전에 변경사항들을 저장해두는 것이라고 생각하면 된다.  쉽게 말해서 커밋할내용을 보낼 물건이라고 치면 staging area는 택배 상자이고 이 택배 상자를 commit을 통해 고객에게 보내는 그런 원리이다. |
+| git remote | 로컬과 연결된 원격저장소 자체를 의미한다.  |
+| origin | 로컬 저장소에 저장되어 있는 기본이 되는 원격저장소의 이름 |
+| git push | 코드를 로컬에서 원격저장소로 보낸다(민다) 라는 의미이다. |
+| HEAD | head는 화살표로 내가 지금 있는 브랜치, 커밋 등을 알려주는 포인터 역할을 한다. |
+| conflict | merge를 했을때 자동으로 코드가 병합되지 못하고 충돌이 발생한 상태 |
+| cherry picking | 어떤 회사의 제품이나 서비스 가운데 비용 대비 효율이 뛰어나거나 인기가 있는 특정 요소만을 케이크 위 체리 뽑듯이 골라 자신에게 유리하게 소비하려는 현상을 가리키는 [경제](https://namu.wiki/w/%EA%B2%BD%EC%A0%9C) 용어. (출처 - 나무위키) |
+|  |  |
+|  |  |
 
 ## 🔥 도전 과제 & 해결 (Challenge & Solution)
 
 > 오늘 겪은 문제나 도전적인 과제, 그리고 그것을 어떻게 해결했는지 기록합니다.
 >
-- **과제/문제**:
-- **시도 및 해결**:
+1. GitHub에서 새 저장소(repository)를 생성하세요. (README 없이)
+2. 로컬의 기존 프로젝트에 원격 저장소를 연결하세요.
+3. 로컬 커밋을 원격으로 push하세요.
+4. GitHub 웹사이트에서 파일이 올라갔는지 확인하세요.
+5. GitHub 웹에서 [README.md](http://README.md) 파일을 직접 추가하세요.
+6. 로컬에서 pull을 실행하여 [README.md](http://README.md)를 가져오세요.
+
+
+git pusg 성공 log
+DGSO23@DESKTOP-DN21922 MINGW64 ~/aws13th-git-prac (main)
+$ git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 255 bytes | 127.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/no-easy-days/aws13th-jeonguk-prac
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+
+
+git pull 성공 log
+DGSO23@DESKTOP-DN21922 MINGW64 ~/aws13th-git-prac (main)
+$ git pull origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 941 bytes | 117.00 KiB/s, done.
+From https://github.com/no-easy-days/aws13th-jeonguk-prac
+ * branch            main       -> FETCH_HEAD
+   7db038c..7eb9a71  main       -> origin/main
+Updating 7db038c..7eb9a71
+Fast-forward
+ README.md | 1 +
+
 
 ## 💭 오늘의 회고 (Retrospective)
 
-- **Keep (좋았던 점)**:
-- **Problem (아쉬웠던 점)**:
-- **Try (시도할 점)**:
+- **Keep (좋았던 점)**: 오늘 실습도 전부 다 해봤고 개념도 어느정도 얘기 할 수 있을 정도로 알아가서 좋다.
+- **Problem (아쉬웠던 점)**: 근데 아직 ~~해라 하면 머리가 하얘지긴 한다.
+- **Try (시도할 점)**: 계속 써보고 고쳐보고 올려보고 하면서 익숙해지려고 노력할것
 
 ## 🔗 참고 자료 (References)
 
