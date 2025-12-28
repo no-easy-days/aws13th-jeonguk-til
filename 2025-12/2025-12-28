@@ -1,0 +1,160 @@
+# [2025-12-28] python 공부
+
+## ☀️ 오늘의 목표 (Scrum)
+
+> 내일 파이썬 수업을 좀 더 수월하게 듣기 위한 Python 예습
+
+
+## 📝 배운 내용 (Today I Learned)
+
+### 변수와 자료형 (int, float, str, bool, list, dict, tuple, set)
+
+int는 소수점이 없는 정수를 저장하는 자료형이다.
+양수, 음수, 0을 포함하며 사칙연산과 수치 계산에 사용된다.
+
+float는 소수점을 포함한 실수를 저장하는 자료형이다.
+실수 계산에 사용되며 부동소수점 오차가 발생할 수 있다.
+
+str은 문자열을 저장하는 자료형이다.
+문자나 텍스트 데이터를 표현하며 큰따옴표 또는 작은따옴표로 감싼다.
+
+bool은 참(True) 또는 거짓(False)을 나타내는 자료형이다.
+조건문과 논리 연산에서 사용된다.
+
+list는 여러 값을 순서대로 저장하는 자료형이다.
+순서가 있고 중복을 허용하며 값의 수정이 가능하다.
+
+dict는 키(key)와 값(value)의 쌍으로 데이터를 저장하는 자료형이다.
+키를 통해 값을 빠르게 조회할 수 있으며 중복된 키는 허용되지 않는다.
+
+tuple은 여러 값을 순서대로 저장하지만 수정이 불가능한 자료형이다.
+값이 변경되면 안 되는 데이터에 사용된다. (중복 o 순서 o ()사용)
+
+set은 중복되지 않은 값을 저장하는 자료형이다.
+순서가 없으며 집합 연산에 주로 사용된다. (중복 x 순서 x, {} 사용)
+
+```
+간단한 실습 코드
+a = 10   #int
+b = 1.52   #float
+c = "AWS"  #str
+d = True   #bool
+print(a)
+print(b)
+print(c)
+print(d)
+
+print()
+
+#list 실습
+nums = [25,12,28]
+nums[0] = 77
+print(nums)
+
+#dict 실습
+student = {
+    "name" : "jeonguk",
+    "age" : 25
+}
+print(student["name"])
+print(student["age"])
+
+student["grade"] = "A"
+print(student)
+
+#tuple과 set
+t = (1,3,2,3)
+print(t[0])
+print(t[1])
+print(t[2])
+print(t[3])
+
+s = {1,2,2,2,3}
+print(s)
+```
+
+### 조건문과 반복문 (if, for, while)
+if는 조건이 참(True)일 때만 코드를 실행하는 문법이다.
+for는 정해진 횟수만큼 반복할 때 사용한다.
+while은 조건이 참인 동안 계속 반복한다.
+break, continue 문 등으로 제어할 수 있다.
+
+```
+#if문 실습코드
+x = 12
+
+if x > 0:
+    print("양수")
+elif x == 0:
+    print("x는 0이다")
+else:
+    print("음수")
+
+#while문 실습코드
+count = 3
+
+while count > 0:
+    print(count)
+    count = count - 1
+    
+#for문 실습코드
+i = 0
+for i in range(5):
+    print(i)
+    i = i + 1
+```
+#### 함수의 정의와 호출
+함수는 자주 사용하는 코드를 하나로 묶어두고 필요할 때 다시 사용하는 문법이다.
+코드의 중복을 줄이고, 가독성과 유지보수를 좋게 만든다.
+def : 함수 정의 키워드
+복잡한 로직을 이름 있는 기능으로 분리하기 위해서 함수를 사용해야 한다.
+```
+#함수 정의와 호출 실습 코드
+def AWS_student(name = "학생"):
+    print("안녕하세요", name)
+
+AWS_student("정욱")
+```
+
+
+##### 기본 입출력(input,print)
+print는 화면에 값을 출력하는 함수이다.
+
+input은 사용자로부터 값을 입력받는 함수이다.
+```
+#print 실습코드
+name = "정욱"
+age = 25
+print(name, age)
+
+#input 실습코드
+name = input("이름을 입력하세요:")
+print("반갑당", name)
+```
+###### 클래스
+클래스는 관련 있는 변수와 함수를 하나로 묶는 구조이다.
+객체(Object)는 클래스를 기반으로 만든 실제 데이터이다.
+현실 세계의 설계도(클래스)와 실물(객체) 관계로 이해하면 쉽다.
+
+```
+#class 실습코드
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def introduce(self):
+        print("이름:", self.name)
+        print("나이:", self.age)
+
+s1 = Person("정욱", 25)
+s1.introduce()
+
+```
+
+## 💭 오늘의 회고 (Retrospective)
+
+- **Keep (좋았던 점)**: 예전에 파이썬으로 프로젝트를 진행한 적이 있는데 솔직하게 gpt로 거의 다 완성시켜서 했다고 생각하기도 어려웠는데
+                        지금 파이썬을 공부해 나가며 그때 썼던 것들이 다 이런 개념과 알고리즘이구나 라는 것을 알게되어서 좋댜.
+- **Problem (아쉬웠던 점)**: 아직 많이 부족하고 코드가 길어지면 어려울것 같아서 더 공부해야겠다.
+- **Try (시도할 점)**: 내일부터 파이썬 수업이 시작되는데 열심히 듣고 실습을 통해 기초를 더 다질것이다.
